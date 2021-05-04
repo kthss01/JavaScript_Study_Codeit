@@ -10,3 +10,18 @@ console.log(lattePrice * 4 + mochaPrice * 2);
 console.log(lattePrice + mochaPrice);
 console.log(espressoPrice + lattePrice * 4);
 console.log(lattePrice * 2);
+
+// 함수 선언
+function greetings(sentence) {
+  console.log('Hi');
+  console.log('안녕');
+  console.log(sentence);
+}
+
+// 함수 호출
+greetings('Hola');
+
+// 파라미터
+function welcome(name) {
+  console.log('안녕하세요' + name + '님!');
+}
