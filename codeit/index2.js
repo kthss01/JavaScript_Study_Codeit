@@ -7,4 +7,7 @@ console.log(7 % 3);
 // 문자열
 console.log('코드잇');
 console.log("코드잇");
-console.log("He siad \"I'm Iron man\"")
+console.log("He said \"I'm Iron man\"")
+
+
+console.log(`He said "I'm Iron man"`)
