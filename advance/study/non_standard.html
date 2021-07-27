@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS with Codeit</title>
+    <style>
+        [status="대기중"] {
+            background-color: #FF6767;
+            color: #FFFFFF;
+        }
+
+        [status="진행중"] {
+            background-color: #5f62ff;
+            color: #FFFFFF;
+        }
+
+        [status="완료"] {
+            background-color: #07c456;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p>할 일 : <b field="title"></b></p>
+    <p>담당자 : <b field="manager"></b></p>
+    <p>상태 : <b field="status"></b></p>
+    <div>
+        상태 변경:
+        <button class="btn" status="대기중">대기중</button>
+        <button class="btn" status="진행중">진행중</button>
+        <button class="btn" status="완료">완료</button>
+    </div> -->
+
+    <!-- dataset 속성 활용 -->
+    <p>할 일 : <b data-field="title"></b></p>
+    <p>담당자 : <b data-field="manager"></b></p>
+    <p>상태 : <b data-field="status"></b></p>
+    <div>
+        상태 변경:
+        <button class="btn" data-status="대기중">대기중</button>
+        <button class="btn" data-status="진행중">진행중</button>
+        <button class="btn" data-status="완료">완료</button>
+    </div>
+
+    <script>
+        // 선택자로 활용
+        // const fields = document.querySelectorAll('[field]');
+        // console.log(fields);
+
+        // 값을 표시할 태그를 구분할 때 활용
+        // const fields = document.querySelectorAll('[field]');
+        // const task = {
+        //     title: '코드 에디터 개발',
+        //     manager: 'CastleRing, Raccoon Lee',
+        //     status: '',
+        // };
+
+        // for (let tag of fields) {
+        //     const field = tag.getAttribute('field');
+        //     tag.textContent = task[field];
+        // }
+
+        // 스타일이나 데이터 변경에 활용
+        // const fields = document.querySelectorAll('[field]');
+        // const task = {
+        //     title: '코드 에디터 개발',
+        //     manager: 'CastleRing, Raccoon Lee',
+        //     status: '',
+        // };
+
+        // for (let tag of fields) {
+        //     const field = tag.getAttribute('field');
+        //     tag.textContent = task[field];
+        // }
+
+        // const btns = document.querySelectorAll('.btn');
+        // for (let btn of btns) {
+        //     const status = btn.getAttribute('status');
+        //     btn.onclick = function () {
+        //         fields[2].textContent = status;
+        //         fields[2].setAttribute('status', status);
+        //     };
+        // }
+
+        // dataset 프로퍼티 활용
+        const fields = document.querySelectorAll('[data-field]');
+        const task = {
+            title: '코드 에디터 개발',
+            manager: 'CastleRing, Raccoon Lee',
+            status: '',
+        };
+
+        for (let tag of fields) {
+            const field = tag.dataset.field;
+            tag.textContent = task[field];
+        }
+
+        const btns = document.querySelectorAll('.btn');
+        for (let btn of btns) {
+            const status = btn.dataset.status;
+            btn.onclick = function () {
+                fields[2].textContent = status;
+                fields[2].dataset.status = status;
+            };
+        }
+    </script>
+</body>
+
+</html>
