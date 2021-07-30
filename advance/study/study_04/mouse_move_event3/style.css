@@ -1,0 +1,23 @@
+.box {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    padding: 60px 35px;
+  }
+  
+  #box1 {
+    background-color: #B6FFAA;
+  }
+  
+  #box2 {
+    background-color: #ACFFFC;
+  }
+  
+  .title {
+    display: inline-block;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #333333;
+  }
