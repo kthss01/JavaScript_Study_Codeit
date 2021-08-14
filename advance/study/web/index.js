@@ -7,5 +7,5 @@
 // promise
 // default 다른 이름으로 불러오고 싶을 때
 import { default as compute } from './scripts/promise.js'
-
+ 
 compute();
